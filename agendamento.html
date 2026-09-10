@@ -23,16 +23,24 @@
           <h2>Agende seu seviço</h2>
         <form action="#" method="post">
             <label for="nome">Nome Completo:</label>
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome" required>
             <br>
             <label for="telefone">Telefone:</label>
-            <input type="tel" name="telefone" id="telefone">
+            <input type="tel" 
+            name="telefone" 
+            id="telefone"
+             required
+             inputmode="numeric"
+             maxlength="15"
+             pattern="(?:\(?[1-9]{2}\)?\s?)?(?:9\d{4}|\d{4})-?\d{4}"
+             title="Digite com DDD. Ex: (17) 98765-4321 ou 17987654321"
+            >
             <br>
             <label for="data">Data:</label>
-            <input type="date" name="data" id="data">
+            <input type="date" name="data" id="data" required>
             <br>
             <label for="hora">Horário:</label>
-            <input type="time" name="hora" id="hora">
+            <input type="time" name="hora" id="hora" required>
             <br>
              <label for="servico">Serviço</label>
             <select name="servico" id="servico" >
@@ -42,6 +50,13 @@
                 <option value="">Manutenção e Reparo do Sistema Hidráulico</option>
                 <option value="">Revisão Completa da Transmissão e Embreagem</option>
                 <option value="">Alinhamento, Solda Estrutural e Troca de Peças de Desgaste</option>
+                </select>
+            <br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" rows="4"></textarea>
+            <br>
+            <button type="submit">Confirmar agendamento</button>
+        </form>
 
            
     </main>
